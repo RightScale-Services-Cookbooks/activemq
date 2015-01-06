@@ -20,3 +20,10 @@ attribute "activemq/mirror",
   :type        => "string",
   :display     => "activemq/mirror",
   :required    => "required"
+
+attribute "activemq/version",
+  :description => "Version of ActiveMQ to be installed.",
+  :recipes     => ["activemq::default"],
+  :type        => "string",
+  :display     => "activemq/version",
+  :required    => "required"

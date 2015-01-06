@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 
-default['activemq']['version'] = '5.9.1'
 default['activemq']['home']  = '/opt'
 default['activemq']['wrapper']['max_memory'] = '1024'
 default['activemq']['wrapper']['useDedicatedTaskRunner'] = 'true'
