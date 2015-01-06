@@ -13,3 +13,10 @@ end
 depends 'java', '~> 1.13'
 
 recipe 'activemq::default', 'Installs ActiveMQ and sets it up as a service.'
+
+attribute "activemq/mirror",
+  :description => "URL where to download ActiveMQ tarball.",
+  :recipes     => ["activemq::default"],
+  :type        => "string",
+  :display     => "activemq/mirror",
+  :required    => "required"
