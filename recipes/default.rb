@@ -80,5 +80,13 @@ end
 template "#{activemq_home}/bin/linux/wrapper.conf" do
   source   'wrapper.conf.erb'
   mode     '0644'
+end
+
+template "#{activemq_home}/conf/jetty-realm.properties" do
+  source   'jetty-realm.properties.erb'
+  mode     '0644'
+  variables({
+    :password => node[:activemq][:webconsole_password]
+  })
   notifies :restart, 'service[activemq]'
 end
